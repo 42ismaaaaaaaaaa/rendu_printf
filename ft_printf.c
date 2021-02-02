@@ -6,7 +6,7 @@
 /*   By: iouali <iouali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 14:03:12 by iouali            #+#    #+#             */
-/*   Updated: 2021/01/28 15:40:42 by iouali           ###   ########.fr       */
+/*   Updated: 2021/02/02 14:46:19 by iouali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,10 @@ char	*parse_flags(char *str, va_list params)
 			j = ft_strlen(result);
 			i++;
 		}
-		else
+		else 
 			result[j++] = str[i++];
 	}
+	result[j] = '\0';
 	return (result);
 }
 

@@ -4,3 +4,5 @@ printf_lov*
 42TESTERS*
 a.out
 main.c
+libc*
+printf-tester

@@ -6,7 +6,7 @@
 /*   By: iouali <iouali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 14:16:41 by iouali            #+#    #+#             */
-/*   Updated: 2021/01/28 15:41:10 by iouali           ###   ########.fr       */
+/*   Updated: 2021/02/03 13:33:24 by iouali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ int		print_zeros_pointers(char *flags, int *tab, unsigned long long nb,
 void	write_to_hexa_pointers(unsigned long long c, char op);
 void	print_zeros_pointers_extension(unsigned long long nb, int precision,
 										char op);
+int		size_until_op(char *str);
 
 #endif

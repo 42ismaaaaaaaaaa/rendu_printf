@@ -6,7 +6,7 @@
 /*   By: iouali <iouali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 14:03:12 by iouali            #+#    #+#             */
-/*   Updated: 2021/02/02 14:46:19 by iouali           ###   ########.fr       */
+/*   Updated: 2021/02/03 13:35:30 by iouali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,7 @@ char	*parse_flags(char *str, va_list params)
 	int		i;
 	int		j;
 
-	len = 0;
-	while (!is_op(str[len]) && str[len])
-		len++;
+	len = size_until_op(str);
 	if (!(result = malloc(sizeof(char) * len)))
 		return (0);
 	ft_bzero(result, len);
@@ -60,7 +58,7 @@ char	*parse_flags(char *str, va_list params)
 			j = ft_strlen(result);
 			i++;
 		}
-		else 
+		else
 			result[j++] = str[i++];
 	}
 	result[j] = '\0';

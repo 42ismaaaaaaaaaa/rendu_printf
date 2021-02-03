@@ -6,7 +6,7 @@
 /*   By: iouali <iouali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 14:40:41 by iouali            #+#    #+#             */
-/*   Updated: 2021/01/28 14:59:29 by iouali           ###   ########.fr       */
+/*   Updated: 2021/02/03 13:35:20 by iouali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,14 @@ int		print_str_len(char *str, int max)
 		i++;
 	}
 	return (i);
+}
+
+int		size_until_op(char *str)
+{
+	int len;
+
+	len = 0;
+	while (!is_op(str[len]) && str[len])
+		len++;
+	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: iouali <iouali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 13:29:52 by iouali            #+#    #+#             */
-/*   Updated: 2021/02/03 13:22:01 by iouali           ###   ########.fr       */
+/*   Updated: 2021/02/03 13:23:49 by iouali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ int		ft_handle_pointers(unsigned long long nb, char *flags)
 	print_after = get_print_after(flags, zeros, 0, precision);
 	n = nb;
 	if ((print_after == 1 || zeros == 1 ||
-		ft_strlen(flags) == 0 || width <= size_of_hex(n) + 2) || (nb == 0 && precision <= size_of_hex(n) + 3 && width <= size_of_hex(n) + 3 && precision != 0))
+		ft_strlen(flags) == 0 || width <= size_of_hex(n) + 2) ||
+		(nb == 0 && precision <= size_of_hex(n) + 3 &&
+		width <= size_of_hex(n) + 3 && precision != 0))
 		ft_putstr("0x");
 	return (ft_handle_pointers_bis(nb, flags, 'p'));
 }
